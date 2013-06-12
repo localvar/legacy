@@ -1,0 +1,46 @@
+#pragma once
+
+class CFilterDialog : public CDialogImpl<CFilterDialog>
+{
+public:
+	CAtlArray<CExceptionInfo> m_aException;
+
+public:
+	enum { IDD = IDD_FILTER };
+
+	BEGIN_MSG_MAP( CFilterDialog )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, LVN_GETDISPINFO, OnGetDispInfo )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, LVN_GETINFOTIP, OnGetTooltip )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, LVN_ITEMCHANGED, OnItemChanged )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, NM_DBLCLK, OnListDblClk )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, NM_CLICK, OnListClick )
+		NOTIFY_HANDLER( IDC_EXCEPTION_LIST, LVN_KEYDOWN, OnListKeyDown )
+		COMMAND_ID_HANDLER( IDOK, OnOk )
+		COMMAND_ID_HANDLER( IDCANCEL, OnCancel )
+		COMMAND_ID_HANDLER( IDC_ADD, OnAdd )
+		COMMAND_ID_HANDLER( IDC_DELETE, OnDelete )
+		COMMAND_ID_HANDLER( IDC_SELECT_ALL, OnSelectAll )
+		COMMAND_ID_HANDLER( IDC_UNSELECT_ALL, OnUnselectAll )
+		MESSAGE_HANDLER( WM_INITDIALOG, OnInitDialog )
+	END_MSG_MAP()
+
+
+public:
+	explicit CFilterDialog( CAtlArray<CExceptionInfo>& aException );
+
+
+public:
+	LRESULT OnInitDialog( UINT, WPARAM, LPARAM, BOOL& );
+	LRESULT OnOk( WORD, WORD, HWND, BOOL& );
+	LRESULT OnCancel( WORD, WORD, HWND, BOOL& );
+	LRESULT OnAdd( WORD, WORD, HWND, BOOL& );
+	LRESULT OnDelete( WORD, WORD, HWND, BOOL& );
+	LRESULT OnSelectAll( WORD, WORD, HWND, BOOL& );
+	LRESULT OnUnselectAll( WORD, WORD, HWND, BOOL& );
+	LRESULT OnGetTooltip( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnGetDispInfo( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnItemChanged( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnListDblClk( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnListClick( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnListKeyDown( int, LPNMHDR pNMHDR, BOOL& bHandled );
+};

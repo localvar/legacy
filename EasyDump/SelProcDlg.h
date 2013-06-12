@@ -1,0 +1,40 @@
+#pragma once
+
+class CSelProcDlg : public CDialogImpl<CSelProcDlg>, public CDialogResize<CSelProcDlg>
+{
+public:
+	CSortListViewCtrl m_lst;
+	DWORD m_dwPid;
+	TCHAR m_szImagePath[MAX_PATH];
+	HANDLE m_hProc;
+
+public:
+	enum { IDD = IDD_SELECT_PROCESS };
+
+	BEGIN_DLGRESIZE_MAP( CSelProcDlg )
+		DLGRESIZE_CONTROL( IDC_PROCESS_LIST, DLSZ_SIZE_X | DLSZ_SIZE_Y )
+		DLGRESIZE_CONTROL( IDC_REFRESH, DLSZ_MOVE_Y )
+		DLGRESIZE_CONTROL( IDOK, DLSZ_MOVE_X | DLSZ_MOVE_Y )
+		DLGRESIZE_CONTROL( IDCANCEL, DLSZ_MOVE_X | DLSZ_MOVE_Y )
+	END_DLGRESIZE_MAP()
+
+	BEGIN_MSG_MAP( CSelProcDlg )
+		COMMAND_ID_HANDLER( IDCANCEL, OnCancel )
+		COMMAND_ID_HANDLER( IDOK, OnOk )
+		COMMAND_ID_HANDLER( IDC_REFRESH, OnRefresh )
+		MESSAGE_HANDLER( WM_INITDIALOG, OnInitDialog )
+		NOTIFY_HANDLER( IDC_PROCESS_LIST, LVN_ITEMCHANGED, OnLvnItemchangedProcessList )
+		NOTIFY_HANDLER( IDC_PROCESS_LIST, NM_DBLCLK, OnNMDblclkProcessList )
+		CHAIN_MSG_MAP( CDialogResize<CSelProcDlg> )
+	END_MSG_MAP()
+
+public:
+	void RefreshProcessList();
+
+	LRESULT OnInitDialog( UINT, WPARAM, LPARAM, BOOL& );
+	LRESULT OnCancel( WORD, WORD, HWND, BOOL& );
+	LRESULT OnOk( WORD, WORD, HWND, BOOL& );
+	LRESULT OnRefresh( WORD, WORD, HWND, BOOL& );
+	LRESULT OnLvnItemchangedProcessList( int, LPNMHDR pNMHDR, BOOL& );
+	LRESULT OnNMDblclkProcessList( int, LPNMHDR, BOOL& bHandled );
+};

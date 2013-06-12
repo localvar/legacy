@@ -1,0 +1,30 @@
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION ED_VER_MAJOR,ED_VER_MINOR,ED_VER_RELEASE,ED_VER_REV
+ PRODUCTVERSION ED_VER_MAJOR,ED_VER_MINOR,ED_VER_RELEASE,ED_VER_REV
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "ÇáËÉ×ª´¢"
+            VALUE "FileVersion", ED_VER_STR
+            VALUE "InternalName", "EasyDump"
+            VALUE "OriginalFilename", "EasyDump.exe"
+            VALUE "ProductName", ED_PRODUCT_NAME
+            VALUE "ProductVersion", ED_VER_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END

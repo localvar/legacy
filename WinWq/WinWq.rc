@@ -1,0 +1,934 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\WinWq.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WinWq.ico"
+IDR_WINWQTYPE           ICON                    "res\\CBoard.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_BOARD               BITMAP                  "res\\Board.bmp"
+IDB_BLACK               BITMAP                  "res\\black.bmp"
+IDB_WHITE               BITMAP                  "res\\white.bmp"
+IDB_LIGHTBULB           BITMAP                  "res\\litebulb.bmp"
+REGRETU                 BITMAP                  "res\\regretu.bmp"
+REGRETD                 BITMAP                  "res\\bitmap2.bmp"
+REGRETF                 BITMAP                  "res\\regretf.bmp"
+REGRETX                 BITMAP                  "res\\bitmap4.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新棋谱(&N)\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",                  ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                    ID_FILE_PRINT_PREVIEW
+        MENUITEM "打印设置(&R)...",                 ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                        ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "悔棋(&R)\tBack",                ID_EDIT_REGRET
+        MENUITEM "重下(&E)\tA",                   ID_EDIT_REPUT
+        MENUITEM "连续悔棋(&M)",                    ID_EDIT_REGRET_MORE
+        MENUITEM "弃权(&O)\tP",                   ID_GIVE_IN
+        MENUITEM "认输(&G)",                      ID_EDIT_LOST
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)",                      ID_FIND_PIECE
+        MENUITEM SEPARATOR
+        MENUITEM "删除(&D)\tCtrl+Enter",          ID_EDIT_DELETE
+        MENUITEM "放黑子(&H)\tB",                  ID_PUT_BLACK
+        MENUITEM "放白子(&J)\tW",                  ID_PUT_WHITE
+        MENUITEM "改变颜色(&G)\tI",                 ID_EDIT_INVERT
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&P)",                      ID_PROPERTIES
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        MENUITEM "音乐(&M)",                      ID_OPTION_MUSIC
+        MENUITEM "音效(&E)",                      ID_OPTION_SOUND
+        MENUITEM SEPARATOR
+        MENUITEM "设置(&S)",                      ID_OPTION_SETTINGS
+        MENUITEM "显示序号(&R)",                    ID_SHOW_ORDER
+        POPUP "名局赏析"
+        BEGIN
+            MENUITEM "打谱",                          ID_REPLAY
+            MENUITEM "自动打谱",                        ID_AUTO_REPLAY
+            MENUITEM "猜局",                          ID_GUESS
+        END
+        MENUITEM SEPARATOR
+        POPUP "工具"
+        BEGIN
+            MENUITEM "转换棋谱",                        ID_CONVERT
+        END
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 清风围棋(&A)...",              ID_APP_ABOUT
+        MENUITEM "纹枰格言(&B)",                    CG_IDS_TIPOFTHEDAY
+    END
+END
+
+IDR_BWMENU MENU 
+BEGIN
+    POPUP "BWCONTEXTMENU"
+    BEGIN
+        MENUITEM "取消",                          ID_CANCEL
+        MENUITEM SEPARATOR
+        MENUITEM "悔棋(&R)\tBack",                ID_EDIT_REGRET
+        MENUITEM "重下(&E)\tA",                   ID_EDIT_REPUT
+        MENUITEM "连续悔棋(&M)",                    ID_EDIT_REGRET_MORE
+        MENUITEM "弃权(&O)\tP",                   ID_GIVE_IN
+        MENUITEM "认输(&G)",                      ID_EDIT_LOST
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)",                      ID_FIND_PIECE
+        MENUITEM SEPARATOR
+        MENUITEM "删除(&D)\tCtrl+Enter",          ID_EDIT_DELETE
+        MENUITEM "放黑子(&H)\tB",                  ID_PUT_BLACK
+        MENUITEM "放白子(&J)\tW",                  ID_PUT_WHITE
+        MENUITEM "改变颜色(&G)\tI",                 ID_EDIT_INVERT
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&P)",                      ID_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      ID_EDIT_DELETE,         VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 225, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 清风围棋"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,17,20,20
+    LTEXT           "清风围棋 0.5 版",IDC_STATIC,41,12,61,8,SS_NOPREFIX
+    LTEXT           "ZBM 版权所有 (C) 1998--2000",IDC_STATIC,41,24,125,8
+    DEFPUSHBUTTON   "确定",IDOK,168,7,50,14,WS_GROUP
+    LTEXT           "免费软件  欢迎使用",IDC_STATIC,41,36,73,8
+END
+
+IDD_INFORMATION DIALOGEX 0, 0, 129, 249
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "Fixedsys", 0, 0, 0x1
+BEGIN
+    LTEXT           "赛事:",IDC_STATIC,7,13,19,8
+    LTEXT           "黑方:",IDC_STATIC,7,25,19,8
+    LTEXT           "白方:",IDC_STATIC,7,37,19,8
+    CTEXT           "",IDC_GAMENAME,33,13,89,8
+    CTEXT           "",IDC_BLACKNAME,33,25,89,8
+    CTEXT           "",IDC_WHITENAME,33,37,89,8
+    LTEXT           "00:00:00",IDC_BLACK_TIME,17,55,33,8,SS_NOTIFY | NOT WS_GROUP
+    LTEXT           "00:00:00",IDC_WHITE_TIME,67,55,33,8,SS_NOTIFY | WS_TABSTOP
+    EDITTEXT        IDC_DISCRIBE,7,137,115,59,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "●",IDC_PUT_BLACK,7,87,18,15
+    PUSHBUTTON      "○",IDC_PUT_WHITE,27,87,18,15
+    DEFPUSHBUTTON   "Button1",IDC_BUTTON1,7,7,13,8,NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    LTEXT           "拔子数:",IDC_STATIC,7,74,27,8
+    CTEXT           "0",IDC_BLACK_KILLS,45,74,26,8
+    CTEXT           "0",IDC_WHITE_KILLS,89,74,25,8
+    PUSHBUTTON      "变",IDC_INVERT_COLOR,47,87,18,15
+    PUSHBUTTON      "|←",IDC_REGRET_TO_START,7,106,17,12
+    PUSHBUTTON      "→",IDC_REPUT,83,106,17,12
+    PUSHBUTTON      "→|",IDC_REPUT_TO_END,105,106,17,12
+    PUSHBUTTON      "1",IDC_CURRENT_SERNUM,51,106,27,12
+    PUSHBUTTON      "1",IDC_CURRENT_POSITION,97,87,25,15
+    PUSHBUTTON      "删",IDC_DELETE,67,87,18,15
+    PUSHBUTTON      "弃权",IDC_GIVE_IN,7,122,28,11
+    PUSHBUTTON      "认输",IDC_GIVE_UP,39,122,28,11
+    PUSHBUTTON      "←",IDC_REGRET,29,106,17,12
+    CONTROL         "List1",IDC_STAT_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,7,197,115,46
+END
+
+IDD_NEWGAME DIALOG  0, 0, 172, 131
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新棋局"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_GAME_NAME,28,8,103,58,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_GAMEDATE,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,28,23,74,12
+    COMBOBOX        IDC_BLACK_NAME,27,50,56,56,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BLACK_DEGREE,27,68,56,77,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WHITE_NAME,108,50,56,56,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WHITE_DEGREE,108,68,56,76,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "自由对局",IDC_FREE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,98,48,10
+    CONTROL         "正式比赛",IDC_STARDARD,"Button",BS_AUTORADIOBUTTON,59,98,48,10
+    CONTROL         "快棋赛",IDC_FASTGAME,"Button",BS_AUTORADIOBUTTON,9,111,40,10
+    CONTROL         "棋谱录入",IDC_RECORD,"Button",BS_AUTORADIOBUTTON,59,111,48,10
+    COMBOBOX        IDC_BLACK_PREPUT,117,109,46,49,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,135,8,31,14
+    PUSHBUTTON      "取消",IDCANCEL,135,25,31,14
+    LTEXT           "赛事",IDC_STATIC,9,11,17,8
+    LTEXT           "日期",IDC_STATIC,9,25,17,8
+    GROUPBOX        "黑方",IDC_STATIC,7,39,78,46
+    GROUPBOX        "白方",IDC_STATIC,88,39,78,46
+    LTEXT           "姓名",IDC_STATIC,9,52,17,8
+    LTEXT           "段位",IDC_STATIC,9,70,17,8
+    LTEXT           "姓名",IDC_STATIC,91,52,17,8
+    LTEXT           "段位",IDC_STATIC,91,70,17,8
+    GROUPBOX        "录入方式",IDC_STATIC,7,89,104,33
+END
+
+IDD_MULTI_REGRET DIALOG  0, 0, 138, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "连续悔棋"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_HAND,87,34,28,11,ES_RIGHT | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY,104,35,6,10
+    DEFPUSHBUTTON   "确定",IDOK,20,52,35,14
+    PUSHBUTTON      "取消",IDCANCEL,80,52,35,14
+    LTEXT           "这盘棋共有:",IDC_TOTAL_IN_GAME,12,10,119,8
+    LTEXT           "当前是第",IDC_CURRENT_IN_GAME,12,23,119,8
+    LTEXT           "您希望棋谱运行至第",IDC_STATIC,12,35,73,8
+    LTEXT           "手",IDC_STATIC,117,35,9,8
+END
+
+IDD_ENDGAME DIALOG  0, 0, 187, 83
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "比赛结束"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,34,63,42,12
+    PUSHBUTTON      "取消",IDCANCEL,110,63,42,12
+    LTEXT           "这盘棋共有:",IDC_MAXHAND,7,22,173,8
+    EDITTEXT        IDC_WINLOST,42,6,138,12,ES_AUTOHSCROLL
+    LTEXT           "比赛结果:",IDC_STATIC,7,8,35,8
+    LTEXT           "中盘从",IDC_STATIC,7,35,25,8
+    EDITTEXT        IDC_MIDDLEGAME,32,33,28,12,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,45,35,12,9
+    LTEXT           "手开始;",IDC_STATIC,62,35,28,8
+    LTEXT           "官子从",IDC_STATIC,98,35,25,8
+    EDITTEXT        IDC_GUANZI,124,33,28,12,ES_RIGHT | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,151,34,9,10
+    LTEXT           "手开始",IDC_STATIC,154,35,25,8
+    CONTROL         "DateTimePicker1",IDC_BLACK_TIMEUSED,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,42,47,49,12
+    LTEXT           "黑方用时:",IDC_STATIC,7,49,35,8
+    LTEXT           "白方用时:",IDC_STATIC,94,49,35,8
+    CONTROL         "DateTimePicker2",IDC_WHITE_TIMEUSED,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,129,47,49,12
+END
+
+IDD_FINDPIECE DIALOG  0, 0, 137, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找棋子"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,16,43,36,12
+    PUSHBUTTON      "取消",IDCANCEL,81,43,36,12
+    LTEXT           "这盘棋共有",IDC_MAXHAND,7,7,118,8
+    LTEXT           "请输入要查找棋子的序号:",IDC_STATIC,7,19,91,8
+    EDITTEXT        IDC_PIECE_TO_FIND,100,18,27,12,ES_RIGHT | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,115,22,9,10
+    LTEXT           "光标将自动移到该棋子的位置上",IDC_STATIC,9,31,113,8
+END
+
+IDD_SETTINGDLG DIALOG  0, 0, 199, 217
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_BOARD_PANES,30,5,50,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MUSIC_FILE_NAME,45,21,84,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_MUSIC_FILE,132,21,19,11
+    CONTROL         "继续猜",IDC_GIVE_ANSWER,"Button",BS_AUTORADIOBUTTON | WS_GROUP,44,48,40,10
+    CONTROL         "给出正确答案",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,85,48,64,10
+    EDITTEXT        IDC_PREPUT_NUM_INGUESS,55,60,24,12,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,68,61,9,11
+    EDITTEXT        IDC_AUTOREPLAY_DELAY_TIME,77,76,27,12
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,93,78,9,8
+    EDITTEXT        IDC_ENTIRE_GAME_TIME,44,100,27,12,ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN_ENTIRE_GAME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,61,103,8,9
+    EDITTEXT        IDC_ALLOW_OVERTIME,118,100,23,12,ES_NUMBER
+    CONTROL         "Spin4",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,137,103,9,9
+    EDITTEXT        IDC_ENTIRE_GAME_TIME2,44,127,27,12,ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN_ENTIRE_GAME2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,58,129,9,9
+    EDITTEXT        IDC_ALLOW_OVERTIME_FAST,118,127,23,12,ES_NUMBER
+    CONTROL         "Spin4",IDC_SPIN5,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,137,130,9,9
+    CONTROL         "打谱时允许修改注释",IDC_EDIT_COMMENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,145,88,10
+    CONTROL         "右键弹出快捷菜单",IDC_CONTEXT_MENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,110,145,80,10
+    DEFPUSHBUTTON   "确定",IDOK,160,7,32,13
+    PUSHBUTTON      "取消",IDCANCEL,160,25,32,13
+    LTEXT           "棋盘:",IDC_STATIC,7,7,21,8
+    LTEXT           "音乐文件:",IDC_STATIC,7,22,37,8
+    GROUPBOX        "猜局",IDC_STATIC,7,37,146,38
+    LTEXT           "猜局前预放",IDC_STATIC,13,62,41,8
+    LTEXT           "手棋",IDC_STATIC,85,62,17,8
+    LTEXT           "猜错时:",IDC_STATIC,13,48,29,8
+    LTEXT           "自动打谱延迟时间:",IDC_STATIC,7,78,69,8
+    LTEXT           "秒",IDC_STATIC,106,78,9,8
+    GROUPBOX        "正式比赛",IDC_STATIC,7,90,146,24
+    LTEXT           "全局时间",IDC_STATIC,10,102,33,8
+    LTEXT           "允许超时",IDC_STATIC,86,102,33,8
+    LTEXT           "次",IDC_STATIC,143,102,9,8
+    GROUPBOX        "快棋赛",IDC_STATIC,7,118,146,24
+    LTEXT           "全局时间",IDC_STATIC,10,129,33,8
+    LTEXT           "允许超时",IDC_STATIC,86,129,33,8
+    LTEXT           "次",IDC_STATIC,143,129,9,8
+    LTEXT           "分",IDC_STATIC,73,103,9,8
+    LTEXT           "分",IDC_STATIC,73,129,9,8
+    LTEXT           "由于有些值要到下次启动时才能生效 , 所以建议您修改完毕后重新启动本程序.",IDC_STATIC,157,65,33,73
+    GROUPBOX        "注意:",IDC_STATIC,155,55,37,87
+    LTEXT           "每盘棋最多允许",IDC_STATIC,9,162,57,8
+    GROUPBOX        "",IDC_STATIC,7,154,185,51
+    EDITTEXT        IDC_MAXHAND,68,160,28,12,ES_NUMBER
+    CONTROL         "Spin3",IDC_SPINMAXHAND,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,86,159,12,14
+    LTEXT           "手",IDC_STATIC,101,162,9,8
+    LTEXT           "每盘棋最多拔子",IDC_STATIC,9,177,57,8
+    EDITTEXT        IDC_MAXKILLS,68,176,28,12,ES_NUMBER
+    CONTROL         "Spin3",IDC_SPINMAXKILLS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,84,175,12,14
+    LTEXT           "个",IDC_STATIC,101,177,9,8
+    LTEXT           "每块棋最多有子",IDC_STATIC,9,193,57,8
+    EDITTEXT        IDC_MAXBLOCK,68,191,28,12,ES_NUMBER
+    CONTROL         "Spin3",IDC_SPINMAXBLOCK,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,88,188,12,14
+    LTEXT           "个",IDC_STATIC,101,193,9,8
+    GROUPBOX        "",IDC_STATIC,114,156,77,28
+    LTEXT           "请您不要随意修改这些值",IDC_STATIC,119,165,66,17
+    PUSHBUTTON      "恢复默认值",IDC_DEFAULT,114,189,76,14
+END
+
+IDD_TIP DIALOG  0, 0, 231, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "纹枰格言"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,12,11,207,123
+    LTEXT           "Some String",IDC_TIPSTRING,23,63,185,60
+    CONTROL         "启动时显示",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,146,85,10
+    PUSHBUTTON      "下一条",IDC_NEXTTIP,109,143,50,14,WS_GROUP
+    DEFPUSHBUTTON   "关闭",IDOK,168,143,50,14,WS_GROUP
+    CONTROL         "",IDC_BULB,"Static",SS_BITMAP,20,17,190,111
+END
+
+IDD_ATTRIB DIALOG  0, 0, 187, 179
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "属性"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,19,158,50,14
+    PUSHBUTTON      "取消",IDCANCEL,114,158,50,14
+    GROUPBOX        "棋谱",IDC_STATIC,7,7,173,76,BS_CENTER
+    LTEXT           "中盘:",IDC_STATIC,18,69,21,8
+    EDITTEXT        IDC_MIDDLE,40,67,28,12,ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,55,70,12,9
+    LTEXT           "官子:",IDC_STATIC,106,71,21,8
+    EDITTEXT        IDC_GUANZI,128,67,28,12,ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,143,69,12,12
+    GROUPBOX        "棋子",IDC_STATIC,7,88,173,67,BS_CENTER
+    LTEXT           "",IDC_GAMEDISCRIBE,9,16,169,43
+    LTEXT           "",IDC_PIECEDISCRIBE,9,97,169,55
+END
+
+IDD_WQ_OPENDLG DIALOG  0, 0, 142, 78
+STYLE DS_SETFONT | DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",1119,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,139,41
+    LTEXT           "",IDC_DISCRIBE,1,42,140,34,SS_SUNKEN | NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "ZBM制作于2000年3月"
+            VALUE "CompanyName", "ZBM Software Studio"
+            VALUE "FileDescription", "清风围棋"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "WinWq"
+            VALUE "LegalCopyright", "ZBM 版权所有 (C) 1998--2000"
+            VALUE "OriginalFilename", "WinWq.EXE"
+            VALUE "ProductName", "WinWq 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_INFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_NEWGAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_MULTI_REGRET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_ENDGAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_FINDPIECE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_SETTINGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_ATTRIB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_WQ_OPENDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_WHITE               CURSOR                  "res\\whiteCur.cur"
+IDC_BLACK               CURSOR                  "res\\blackCur.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_NEWGAME DLGINIT
+BEGIN
+    IDC_GAME_NAME, 0x403, 7, 0
+0xbab4, 0xbcc0, 0xadb1, "\000" 
+    IDC_GAME_NAME, 0x403, 7, 0
+0xa6d3, 0xcfca, 0xadb1, "\000" 
+    IDC_GAME_NAME, 0x403, 9, 0
+0xbbb8, 0xbfca, 0xa8cd, 0xadb1, "\000" 
+    IDC_GAME_NAME, 0x403, 11, 0
+0xfdc8, 0xc7d0, 0xf0bb, 0xd6d4, 0xadb1, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xeec0, 0xfdb2, 0xe4b8, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xf4c4, 0xc0ce, 0xbdc6, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xedc2, 0xfecf, 0xbab4, "\000" 
+    IDC_BLACK_NAME, 0x403, 5, 0
+0xa3b3, 0xbbea, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xd4d5, 0xbed6, 0xabd1, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xdcb2, 0xb9de, 0xe7ee, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xf5c1, 0xfdb2, 0xd5ba, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xe2ce, 0xe5c7, 0xaad4, "\000" 
+    IDC_BLACK_NAME, 0x403, 7, 0
+0xd6c1, 0xa3ba, 0xe5b7, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xf5b3, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xfeb6, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xfdc8, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xc4cb, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xe5ce, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xf9c1, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xf5b3, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xfeb6, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xfdc8, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xc4cb, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xe5ce, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xf9c1, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xdfc6, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xcbb0, 0xceb6, "\000" 
+    IDC_BLACK_DEGREE, 0x403, 5, 0
+0xc5be, 0xceb6, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xeec0, 0xfdb2, 0xe4b8, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xf4c4, 0xc0ce, 0xbdc6, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xedc2, 0xfecf, 0xbab4, "\000" 
+    IDC_WHITE_NAME, 0x403, 5, 0
+0xa3b3, 0xbbea, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xd4d5, 0xbed6, 0xabd1, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xdcb2, 0xb9de, 0xe7ee, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xf5c1, 0xfdb2, 0xd5ba, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xe2ce, 0xe5c7, 0xaad4, "\000" 
+    IDC_WHITE_NAME, 0x403, 7, 0
+0xd6c1, 0xa3ba, 0xe5b7, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xf5b3, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xfeb6, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xfdc8, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xc4cb, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xe5ce, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 9, 0
+0xb5d2, 0xe0d3, 0xf9c1, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xf5b3, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xfeb6, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xfdc8, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xc4cb, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xe5ce, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xf9c1, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xdfc6, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xcbb0, 0xceb6, "\000" 
+    IDC_WHITE_DEGREE, 0x403, 5, 0
+0xc5be, 0xceb6, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xbbb2, 0xc3c8, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 5, 0
+0xc3c8, 0xc8cf, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xfeb6, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xfdc8, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xc4cb, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xe5ce, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xf9c1, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xdfc6, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xcbb0, 0xd3d7, "\000" 
+    IDC_BLACK_PREPUT, 0x403, 7, 0
+0xc3c8, 0xc5be, 0xd3d7, "\000" 
+    0
+END
+
+IDD_SETTINGDLG DLGINIT
+BEGIN
+    IDC_BOARD_PANES, 0x403, 7, 0
+0xc5be, 0xb7c2, 0xccc5, "\000" 
+    IDC_BOARD_PANES, 0x403, 9, 0
+0xaeca, 0xbbd2, 0xb7c2, 0xccc5, "\000" 
+    IDC_BOARD_PANES, 0x403, 9, 0
+0xaeca, 0xfdc8, 0xb7c2, 0xccc5, "\000" 
+    IDC_BOARD_PANES, 0x403, 9, 0
+0xaeca, 0xe5ce, 0xb7c2, 0xccc5, "\000" 
+    IDC_BOARD_PANES, 0x403, 9, 0
+0xaeca, 0xdfc6, 0xb7c2, 0xccc5, "\000" 
+    IDC_BOARD_PANES, 0x403, 9, 0
+0xaeca, 0xc5be, 0xb7c2, 0xccc5, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "清风围棋\n\nWinWq\n棋谱文件 (*.zbm)\n.zbm\nWinWq.Document\n棋谱文件"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "清风围棋"
+    AFX_IDS_IDLEMESSAGE     "免费软件，欢迎使用。  ZBM    1998--2000 版权所有"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "建立新棋谱\n新建"
+    ID_FILE_OPEN            "打开一个现有棋谱\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动棋谱\n保存"
+    ID_FILE_SAVE_AS         "将活动棋谱以一个新文件名保存\n另存为"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动棋谱\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；感谢使用\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该棋谱"
+    ID_FILE_MRU_FILE2       "打开该棋谱"
+    ID_FILE_MRU_FILE3       "打开该棋谱"
+    ID_FILE_MRU_FILE4       "打开该棋谱"
+    ID_FILE_MRU_FILE5       "打开该棋谱"
+    ID_FILE_MRU_FILE6       "打开该棋谱"
+    ID_FILE_MRU_FILE7       "打开该棋谱"
+    ID_FILE_MRU_FILE8       "打开该棋谱"
+    ID_FILE_MRU_FILE9       "打开该棋谱"
+    ID_FILE_MRU_FILE10      "打开该棋谱"
+    ID_FILE_MRU_FILE11      "打开该棋谱"
+    ID_FILE_MRU_FILE12      "打开该棋谱"
+    ID_FILE_MRU_FILE13      "打开该棋谱"
+    ID_FILE_MRU_FILE14      "打开该棋谱"
+    ID_FILE_MRU_FILE15      "打开该棋谱"
+    ID_FILE_MRU_FILE16      "打开该棋谱"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制所选部分的图像到剪贴板\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个棋谱的图像\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO_DIRECTSOUND      "DirectSound 初始化失败. 原因可能是\n1:您没有安装声卡或声卡驱动程序\n2:您没有安装DirectX(程序需要Direct Sound)\n3:启动目录中没有所需的声音文件.\n4:您没有正确安装本软件,请重新安装"
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_REGRET          "悔掉最后一手棋\n悔棋"
+    ID_EDIT_REGRET_MORE     "连续悔多手棋\n连续悔棋"
+    ID_EDIT_DELETE          "删去光标处的棋子\n删除棋子"
+    ID_PUT_BLACK            "在光标处放黑子\n放黑子"
+    ID_PUT_WHITE            "在光标处放白子\n放白子"
+    ID_EDIT_INVERT          "改变光标处棋子的颜色\n改变颜色"
+    ID_OPTION_MUSIC         "打开\\关闭音乐\n音乐"
+    ID_OPTION_SOUND         "打开\\关闭音效\n音效"
+    ID_OPTION_SETTINGS      "改变程序的一些设置\n设置"
+    ID_SHOW_ORDER           "显示/隐藏棋子的序号\n显示序号"
+    ID_PROPERTIES           "显示本局棋及当前光标处棋子的属性\n属性"
+    ID_CANCEL               "去掉快捷菜单"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_REPUT           "重下悔掉的棋\n重下"
+    ID_REPLAY               "手动打谱\n打谱"
+    ID_AUTO_REPLAY          "根据设定的时间间隔自动打谱\n自动打谱"
+    ID_GUESS                "猜局\n猜局"
+    ID_MOVIFY               "转入录入模式,修改本棋谱\n修改"
+    ID_GIVE_IN              "放弃下本手棋,让另一方走\n弃权"
+    ID_EDIT_LOST            "认输\n认输"
+    ID_FIND_PIECE           "根据输入的序号查找棋子位置\n查找"
+    ID_TIP_OF_DAY           "显示纹枰格言\n纹枰格言"
+    ID_CONVERT              "将其他棋谱文件转换为本程序的棋谱文件"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROPSHT_CAPTION     "属性"
+    CG_IDS_TIPOFTHEDAY      "显示纹枰格言"
+    CG_IDS_TIPOFTHEDAYMENU  "纹枰格言..."
+    CG_IDS_DIDYOUKNOW       "你知道吗..."
+    CG_IDS_FILE_ABSENT      "格言文件不存在"
+    CG_IDP_FILE_CORRUPT     "读入格言文件时出错"
+END
+
+STRINGTABLE 
+BEGIN
+    CG_IDS_TIPOFTHEDAYHELP  "帮助"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\WinWq.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

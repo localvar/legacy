@@ -1,0 +1,8 @@
+我的开发环境
+操作系统：windows xp professional + sp1a
+编译器：visual c++.net 2003
+
+由于操作系统的补丁太多，即使与我相同的系统也可能需要修改LoadLibrary、GetProcAddress、VirtualAlloc和"jmp esp"指令的地址。
+
+请谨慎修改编译参数，修改参数可能导致修改程序。
+请只编译release版，debug版无法正常执行。

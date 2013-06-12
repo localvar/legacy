@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Loader", "Loader\Loader.vcproj", "{DEE2EA65-7D7D-4621-99B3-209D377A5790}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dll", "Dll\Dll.vcproj", "{B542E326-806E-4424-85C6-57B452C0C474}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DEE2EA65-7D7D-4621-99B3-209D377A5790}.Debug.ActiveCfg = Debug|Win32
+		{DEE2EA65-7D7D-4621-99B3-209D377A5790}.Debug.Build.0 = Debug|Win32
+		{DEE2EA65-7D7D-4621-99B3-209D377A5790}.Release.ActiveCfg = Release|Win32
+		{DEE2EA65-7D7D-4621-99B3-209D377A5790}.Release.Build.0 = Release|Win32
+		{B542E326-806E-4424-85C6-57B452C0C474}.Debug.ActiveCfg = Debug|Win32
+		{B542E326-806E-4424-85C6-57B452C0C474}.Debug.Build.0 = Debug|Win32
+		{B542E326-806E-4424-85C6-57B452C0C474}.Release.ActiveCfg = Release|Win32
+		{B542E326-806E-4424-85C6-57B452C0C474}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -15,3 +15,7 @@ Below is an one line introduction for each project:
 * **Overflow**: （栈）缓冲区溢出攻击实例，在现在的操作系统上应该不能正常工作了。 A demonstrate of statck overflow attack, I don't think it can work in today's OS any more.
 * **Html2Book**：抓取网页并转换为Word文档，基于 [HtmlAgilityPack](http://htmlagilitypack.codeplex.com/) 实现，目前只支持抓取劝学网。Grab web pages and convert them to a Word document, based on  [HtmlAgilityPack](http://htmlagilitypack.codeplex.com/) .
 * **subfont.cs**：用于提取字体文件子集的代码片段。A piece of code to a pick up a subset of a font file.
+* **minic**：C语言子集解释器，需要用Turbo C v2.0这样的老古董编译。An interpreter of a subset of the C language, requires Turbo C v2.0 to build.
+* **nsvw**：NTFS流查看器。A NTFS Stream viewer.
+* **WedDress**：一个用于婚纱出租管理的小程序。A tool for wed dress rent.
+* **OdbScrpt**：一个半途而废的文本编辑器。A Text editor which was given up halfway.

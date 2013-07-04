@@ -1,0 +1,411 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\OdbScrpt.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_REPEAT
+    BUTTON      ID_EDIT_REPLACE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",               ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "页面设置(&G)...",             ID_FILE_PAGE_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤销(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "重做(&R)\tCtrl+Y",            57644
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&A)\tCtrl+A",            ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)...\tCtrl+F",         ID_EDIT_FIND
+        MENUITEM "下一个(&N)\tF3",              ID_EDIT_REPEAT
+        MENUITEM "替换(&R)...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM "字体(&O)...",                 ID_SET_FONT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  ID_VIEW_TOOLBAR, CHECKED
+        MENUITEM "状态栏(&S)",                  ID_VIEW_STATUS_BAR, CHECKED
+        MENUITEM "函数列表(&F)",                ID_VIEW_FUNC_LIST, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "选项(&O)...",                 ID_VIEW_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 OdbScrpt(&A)...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\OdbScrpt.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,130,81,50,14
+    CTEXT           "OdbScrpt 应用程序 v1.0\n\n(c) 版权所有 2005",IDC_STATIC,
+                    25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,18,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+END
+
+IDD_OPT DIALOGEX 0, 0, 274, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "选项"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "字体",IDC_STATIC,7,3,260,68
+    LTEXT           "样式(&F):",IDC_STATIC,16,18,29,8
+    COMBOBOX        IDC_FONT_FACE,50,15,114,167,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小(&S):",IDC_STATIC,178,18,29,8
+    COMBOBOX        IDC_FONT_SIZE,212,15,48,148,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "粗体(&B)",IDC_BOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,36,41,10
+    CONTROL         "斜体(&I)",IDC_ITALIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,52,40,10
+    CTEXT           "示例AaZz-019",IDC_SAMPLE,64,33,196,31,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "其它",IDC_STATIC,7,76,260,58
+    LTEXT           "默认路径(&P):",IDC_STATIC,16,92,47,11
+    EDITTEXT        IDC_PATH,62,91,183,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,247,91,13,12
+    CONTROL         "显示导航栏(&N)",IDC_NAVI_BAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,112,64,13
+    LTEXT           "制表符宽度(&T):",IDC_STATIC,157,114,53,8
+    EDITTEXT        IDC_TAB_WIDTH,214,111,46,14,ES_AUTOHSCROLL | ES_NUMBER,
+                    WS_EX_RIGHT
+    PUSHBUTTON      "确定",IDOK,159,141,50,14
+    PUSHBUTTON      "取消",IDCANCEL,217,141,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_OPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004B0"
+        BEGIN
+            VALUE "FileDescription", "OdbScrpt"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "OdbScrpt"
+            VALUE "LegalCopyright", "Copyright 2005"
+            VALUE "OriginalFilename", "OdbScrpt.exe"
+            VALUE "ProductName", "OdbScrpt"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "OllyDbg脚本编辑器"
+    IDS_FUNC_PANE_TITLE     "函数列表"
+    IDS_ROW_COL_PANE        "行: 1   列: 1         "
+    IDS_NUMLOCK_PANE        "数字  "
+    IDS_INSERT_PANE         "插入  "
+    IDS_ROW_COL_PANE_FMT    "行: %i   列: %i"
+    IDS_UNTITLED            "无标题"
+    IDS_SAVE_MODIFIED       "文件""%s""的内容已更改, 要保存吗？"
+    IDS_FILE_FILTER         "文本文件(*.txt)\000*.txt\000所有文件(*.*)\000*.*"
+    IDS_WRITE_FILE_FAILED   "文件写入失败."
+    IDS_READ_FILE_FAILED    "读文件失败"
+    IDS_WRONG_TAB_WIDTH     "制表符宽度不能为0"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "使用新文件名保存活动文档\n另存为"
+    ID_FILE_PAGE_SETUP      "进行打印页面设置\n页面设置"
+    ID_FILE_PRINT_SETUP     "进行打印机设置\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "预览打印效果\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示软件的版本、版权和其他信息\n关于"
+    ID_APP_EXIT             "退出应用程序; 提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "为活动文档创建一个新窗口\n新窗口"
+    ID_WINDOW_ARRANGE       "在主窗口的底部排列子窗口的图标\n排列图标"
+    ID_WINDOW_CASCADE       "层叠所有窗口\n层叠"
+    ID_WINDOW_TILE_HORZ     "水平平铺所有窗口\n水平平铺"
+    ID_WINDOW_TILE_VERT     "垂直平铺所有窗口\n垂直平铺"
+    ID_WINDOW_SPLIT         "分割当前窗口为窗格\n分割"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除选中的内容\n删除"
+    ID_EDIT_CLEAR_ALL       "删除所有内容\n全部删除"
+    ID_EDIT_COPY            "复制选中的内容到剪贴板\n复制"
+    ID_EDIT_CUT             "剪切选中的内容到剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的内容\n查找"
+    ID_EDIT_PASTE           "插入剪贴板中的内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一次查找\n下一个"
+    ID_EDIT_REPLACE         "替换指定的内容\n替换"
+    ID_EDIT_SELECT_ALL      "选中文档的所有内容\n全选"
+    ID_EDIT_UNDO            "撤销最后的操作\n撤销"
+    ID_EDIT_REDO            "重做刚刚撤销的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示/隐藏工具栏\n工具栏"
+    ID_VIEW_STATUS_BAR      "显示/隐藏状态栏\n状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "改变窗口大小"
+    ATL_IDS_SCMOVE          "移动窗口"
+    ATL_IDS_SCMINIMIZE      "最小化窗口"
+    ATL_IDS_SCMAXIMIZE      "最大化窗口"
+    ATL_IDS_SCNEXTWINDOW    "切换到下一文档窗口"
+    ATL_IDS_SCPREVWINDOW    "切换回上一文档窗口"
+    ATL_IDS_SCCLOSE         "关闭当前窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "恢复窗口的原始大小"
+    ATL_IDS_SCTASKLIST      "激活任务列表"
+    ATL_IDS_MDICHILD        "激活此窗口"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_FUNC_LIST       "显示/隐藏函数列表"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\OdbScrpt.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

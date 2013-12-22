@@ -6,7 +6,7 @@ This is a backup for my personal old projects. You can use these projects freely
 
 以下是对每个项目的一句话介绍，项目名称后括号内的数字是它的最后更新时间：
 
-Below is an one line introduction for each project:
+Below is an one line introduction for each project, the number in the brackets after the project name is the last updated year:
 
 * **EasyDump(2009)**: 一个用于创建崩溃转储的小工具，用户界面只有中文，需要安装WTL（Windows Template Library）才能编译。 A tool for create crash dumps, the UI are in Chinese, requires WTL(Windows Template Library) to build.
 * **LockFree(2011)**: 一个用于演示无锁多线程技术的项目。 A project for demonstrate lock free multi-thread programming.
@@ -19,3 +19,4 @@ Below is an one line introduction for each project:
 * **nsvw(2005)**：NTFS流查看器。A NTFS Stream viewer.
 * **WedDress(2005)**：一个用于婚纱出租管理的小程序。A tool for wed dress rent.
 * **OdbScrpt(2006)**：一个半途而废的文本编辑器。A Text editor which was given up halfway.
+* **add2admin(2013)**: 将一个指定的用户加入管理员组，可注册为系统服务。Add an user to the administrators group, can be executed as a system service.

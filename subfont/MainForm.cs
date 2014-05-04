@@ -63,19 +63,19 @@ namespace subfont
 		{
 			if (txtOriginFont.Text.Length == 0)
 			{
-				MessageBox.Show("请选择原始字体文件。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				txtLog.Text = "请选择原始字体文件。";
 				return;
 			}
 
 			if (txtOutputFont.Text.Length == 0)
 			{
-				MessageBox.Show("请选择输出字体文件。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				txtLog.Text = "请选择输出字体文件。";
 				return;
 			}
 
 			if (txtInputFile.Text.Length == 0)
 			{
-				MessageBox.Show("请至少选择一个输入文字文件。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				txtLog.Text = "请至少选择一个输入文字文件。";
 				return;
 			}
 

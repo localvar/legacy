@@ -135,10 +135,13 @@ namespace subfont
 				}
 				txtLog.AppendText(sb.ToString());
 			}
-			using (var stream = new System.IO.FileStream(output, System.IO.FileMode.Create))
+			if (indexes.Count > 0)
 			{
-				var data = gt.ComputeSubset(indexes);
-				stream.Write(data, 0, data.Length);
+				using (var stream = new System.IO.FileStream(output, System.IO.FileMode.Create))
+				{
+					var data = gt.ComputeSubset(indexes);
+					stream.Write(data, 0, data.Length);
+				}
 			}
 			txtLog.AppendText(string.Format("\r\n\r\n共提取{0}个字符", indexes.Count));
 		}

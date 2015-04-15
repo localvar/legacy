@@ -61,15 +61,9 @@ namespace subfont
 
 		private void btnExtract_Click(object sender, EventArgs e)
 		{
-			if (txtOriginFont.Text.Length == 0)
+			if (txtOriginFont.Text.Length == 0 && txtOutputFont.Text.Length > 0)
 			{
 				txtLog.Text = "请选择原始字体文件。";
-				return;
-			}
-
-			if (txtOutputFont.Text.Length == 0)
-			{
-				txtLog.Text = "请选择输出字体文件。";
 				return;
 			}
 
@@ -105,7 +99,8 @@ namespace subfont
 			sb.AppendFormat("\r\n共{0}个需要提取的字符", list.Length);
 			txtLog.Text = sb.ToString();
 
-			ExtractFont(originFontDialog.FileName, list, outputFontDialog.FileName);
+			if (txtOriginFont.Text.Length > 0)
+				ExtractFont(txtOriginFont.Text, list, txtOutputFont.Text);
 		}
 
 		private void ExtractFont(string origin, int[] keeplist, string output)
@@ -135,7 +130,7 @@ namespace subfont
 				}
 				txtLog.AppendText(sb.ToString());
 			}
-			if (indexes.Count > 0)
+			if (indexes.Count > 0 && output.Length > 0)
 			{
 				using (var stream = new System.IO.FileStream(output, System.IO.FileMode.Create))
 				{

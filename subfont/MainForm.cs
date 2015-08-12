@@ -67,14 +67,16 @@ namespace subfont
 				return;
 			}
 
-			if (txtInputFile.Text.Length == 0)
+			if (txtInputText.Text.Length == 0 && txtInputFile.Text.Length == 0)
 			{
-				txtLog.Text = "请至少选择一个输入文字文件。";
+				txtLog.Text = "请至少输入一个字符或选择一个输入字符文件。";
 				return;
 			}
 
-			int codepage = (int)comboInputEncode.SelectedValue;
 			KeepList kl = new KeepList();
+			kl.AppendFromString(txtInputText.Text);
+
+			int codepage = (int)comboInputEncode.SelectedValue;
 			foreach (var path in inputTextDialog.FileNames)
 				kl.AppendFromFile(path, codepage);
 
@@ -139,6 +141,11 @@ namespace subfont
 				}
 			}
 			txtLog.AppendText(string.Format("\r\n\r\n共提取{0}个字符", indexes.Count));
+		}
+
+		private void lblOutputFont_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
